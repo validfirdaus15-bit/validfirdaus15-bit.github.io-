@@ -1,0 +1,6 @@
+Taruh karya Anda di folder ini dengan nama persis seperti di bawah. Otomatis muncul di website.
+Video overlay streaming : overlay-1.mp4, overlay-2.mp4, overlay-3.mp4
+Animasi VTuber (video)  : vtuber-1.mp4, vtuber-2.mp4
+Foto AI                 : ai-1.jpg ... ai-5.jpg
+Desain                  : design-1.jpg ... design-8.jpg
+(Format gambar: jpg/jpeg/png/webp. Format video: mp4/webm/mov. Maksimal 25 MB per file lewat upload browser GitHub.)
