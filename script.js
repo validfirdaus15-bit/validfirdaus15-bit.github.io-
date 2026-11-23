@@ -84,12 +84,12 @@
     ['jobstreet-09', 'Mahir Bahasa Inggris dari Dasar'],
     ['jobstreet-10', 'Jago Rumus Dasar Excel'],
     ['jobstreet-02', 'Excel untuk Bantu Kariermu'],
-    ['bkm', 'Sertifikat BKM', 1],
-    ['mental-kebangsaan', 'Sertifikat Mental Kebangsaan', 1],
-    ['minat-bakat-2025', 'Sertifikat Minat Bakat 2025', 1],
-    ['minat-bakat-2026', 'Sertifikat Minat Bakat 2026', 1],
-    ['packaging-supply', 'Sertifikat Packaging Supply', 1],
-    ['one-book', 'Sertifikat One Book', 1],
+    ['pkm-penghargaan', 'Sertifikat Penghargaan — Anggota Kegiatan PKM (13 Okt 2026)', 1],
+    ['mental-kebangsaan', 'Workshop Mental Kebangsaan (26 Sep 2025)', 1],
+    ['minat-bakat-2025', 'Workshop Minat Bakat dan Prestasi (30 Sep 2025)', 1],
+    ['minat-bakat-2026', 'Workshop Pemetaan Minat, Bakat, dan Prestasi (17 Apr 2026)', 1],
+    ['packaging-supply', 'Workshop Peran Packaging dalam Supply Chain (28 Nov 2025)', 1],
+    ['one-book', 'Workshop Penulisan Buku “One Book One Legacy” (15 Apr 2026)', 1],
     ['pamulang-01', 'Seminar Nasional — Universitas Pamulang (13 Nov 2024)'],
     ['pamulang-02', 'ICOMS 2024 — Peserta Seminar Internasional'],
     ['pamulang-03', 'Sertifikat PKKMB & LKMM-PD — Universitas Pamulang'],
@@ -135,10 +135,8 @@
   var K = 'assets/creator/';
   var VEXT = ['mp4', 'webm', 'mov'];
   var groups = {
-    overlay: { type: 'v', n: 3, base: 'overlay-', label: 'Overlay Streaming ' },
-    vtuber: { type: 'v', n: 2, base: 'vtuber-', label: 'Animasi VTuber ' },
-    ai: { type: 'i', n: 5, base: 'ai-', label: 'Foto AI ' },
-    design: { type: 'i', n: 8, base: 'design-', label: 'Desain ' }
+    ai: { type: 'i', n: 6, base: 'ai-', label: 'Foto AI ', t: ['Edit foto AI: tampilan pemutar musik', 'Edit foto AI: langit merah dramatis', 'Ilustrasi pixel art 1', 'Ilustrasi pixel art 2'] },
+    design: { type: 'i', n: 8, base: 'design-', label: 'Desain ', t: ['Desain: poster dokumentasi PKM', 'Desain: poster PKM SMK Mutiara Insani', 'Desain: poster PKM versi pastel'] }
   };
   var found = 0;
   function reveal(g) {
@@ -161,7 +159,7 @@
     var d = groups[g];
     for (var n = 1; n <= d.n; n++) {
       (function (n) {
-        var base = K + d.base + n, title = d.label + n;
+        var base = K + d.base + n, title = (d.t && d.t[n - 1]) || (d.label + n);
         if (d.type === 'i') {
           tryImg(base, function (src) {
             var f = document.createElement('figure');

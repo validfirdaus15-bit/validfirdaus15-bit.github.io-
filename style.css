@@ -82,11 +82,10 @@ nav a:hover,nav a.on{color:var(--ink);border-color:var(--b)}
 .tag{align-self:flex-start;font-size:.78rem;font-weight:700;color:var(--b);background:rgba(34,211,238,.12);padding:.15rem .6rem;border-radius:6px}
 .link{margin-top:auto;align-self:flex-start;background:none;border:0;padding:.4rem 0;font:700 .9rem Manrope,sans-serif;color:var(--b);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 
-.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.2rem}
 .cgrid figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.cgrid video{width:100%;aspect-ratio:16/9;background:#000;object-fit:contain}
-.cgrid .open{aspect-ratio:1/1}
-.cgrid .open img{object-fit:cover}
+.cgrid .open{aspect-ratio:3/4}
+.cgrid .open img{object-fit:contain}
 .cgrid figcaption{padding:.7rem 1rem;font-size:.9rem;font-weight:600}
 
 .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
@@ -120,7 +119,7 @@ dialog p{text-align:center;font-weight:700;margin:.8rem 0 0}
 .rv.in{opacity:1;transform:none}
 
 @media (max-width:900px){
- .grid,.skills,.cgrid,.fgrid{grid-template-columns:repeat(2,1fr)}
+ .grid,.skills,.fgrid{grid-template-columns:repeat(2,1fr)}
  .certs{grid-template-columns:repeat(3,1fr)}
 }
 @media (max-width:760px){
@@ -130,7 +129,8 @@ dialog p{text-align:center;font-weight:700;margin:.8rem 0 0}
  nav a{padding:.9rem 0;border-bottom:1px solid var(--line)}
  .hero-in,.two{grid-template-columns:1fr;gap:2rem}
  .hero-photo{order:-1;max-width:230px}
- .grid,.skills,.cgrid,.fgrid{grid-template-columns:1fr}
+ .grid,.skills,.fgrid{grid-template-columns:1fr}
+ .cgrid{grid-template-columns:repeat(2,1fr)}
  .certs{grid-template-columns:repeat(2,1fr)}
  .btn{flex:1 1 calc(50% - .4rem)}
 }
